@@ -64,7 +64,6 @@ class AirportApiTest(unittest.TestCase):
 
         response = requests.post(url, data=payload, auth=BearerAuth(self.AIRPORT_API_KEY))
         response_body = response.json()
-        print('robert', response_body)
         attributes = response_body["data"]["attributes"]
 
         self.assertEqual(response.status_code, 201)
